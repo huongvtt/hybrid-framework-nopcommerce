@@ -6,8 +6,10 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -224,4 +226,62 @@ public class BasePage {
 	public void switchToDefaultContent(WebDriver driver) {
 		driver.switchTo().defaultContent();
 	}
+
+	public void doubleClickToElement(WebDriver driver, String locator) {
+		new Actions(driver).doubleClick(getWebElement(driver, locator)).perform();
+	}
+	
+	public void hoverMouseToElement(WebDriver driver, String locator) {
+		new Actions(driver).moveToElement(getWebElement(driver, locator)).perform();
+	}
+	
+	public void rightClickToElement(WebDriver driver, String locator) {
+		new Actions(driver).contextClick(getWebElement(driver, locator)).perform();
+	}
+	
+	public void dragAndDropElement(WebDriver driver, String sourceLocator, String targetLocator) {
+		new Actions(driver).dragAndDrop(getWebElement(driver, sourceLocator), getWebElement(driver, targetLocator)).perform();
+	}
+	
+	public void sendKeyBoardToElement(WebDriver driver, String locator, Keys key) {
+		new Actions(driver).sendKeys(getWebElement(driver, locator), key).perform();
+	}
+
+	public void executeForBrowser() {}
+	
+	public void getInnerText() {}
+	
+	public void areExpectedTextInInnerText() {}
+	
+	public void scrollToBottomPage() {}
+	
+	public void navigateToUrlByJS() {}
+	
+	public void highlightElement() {}
+	
+	public void clickToElementByJS() {}
+	
+	public void scrollToElementOnTop() {}
+	
+	public void scrollToElementOnBottom() {}
+	
+	public void sendkeyToElementByJS() {}
+	
+	public void removeAttributeInDOM() {}
+	
+	public void getWebElementValidationMessage() {}
+	
+	public void isImageLoaded() {}
+	
+	public void checkCheckboxByJS() {}
+	
+	public void uncheckCheckboxByJS() {}
+	
+	public void waitForElementVisible() {}
+	
+	public void waitForElementClickable() {}
+	
+	public void waitForElementInvisible() {}
+	
+	public void waitForAlertPresence() {}
 }
