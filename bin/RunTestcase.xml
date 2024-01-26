@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<suite parallel="false" name="NopCommerce">
+	<test name="Run on Firefox">
+		<parameter name = "browser" value = "firefox" />
+		<classes>
+			<class name="com.nopcommerce.account.Level_02_BasePage_Init"/>
+		</classes>
+	</test>
+</suite> 

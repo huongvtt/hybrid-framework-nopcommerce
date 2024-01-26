@@ -1,11 +1,3 @@
 /commons/
-/.gitignore
-/com/
-/RunTestcase.xml
-/HomePageUI.class
-/RegisterPageUI.class
-/pageUIs/
 /pageObjects/
-/reportConfig/
-/retryConfig/
-/utilities/
+/pageUIs/
